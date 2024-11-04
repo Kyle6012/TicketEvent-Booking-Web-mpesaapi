@@ -1,0 +1,19 @@
+<%- include('partials/header', { title: 'Buy Ticket' }) %>
+<main>
+  <section class="ticket-form">
+    <h2>Buy Your Ticket</h2>
+    <form action="/buy-ticket" method="POST">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" required placeholder="+2547XXXXXXXX">
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required placeholder="your-email@example.com">
+      
+      <label for="amount">Ticket Price:</label>
+      <input type="number" id="amount" name="amount" value="1000" readonly>
+      
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </section>
+</main>
+<%- include('partials/footer') %>
